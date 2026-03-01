@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAMA SILALAHi BUTTONS V2 • Hover & Active Effects</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="cyber-grid"></div>
+    <div class="gradient-orb orb1"></div>
+    <div class="gradient-orb orb2"></div>
+    <div class="gradient-orb orb3"></div>
+
+    <!-- SVG Filters for Gooey & Lightning -->
+    <div class="svg-filters">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+                <filter id="gooey">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                    <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+                </filter>
+                
+                <!-- Lightning Effect -->
+                <filter id="lightning">
+                    <feTurbulence baseFrequency="0.1 0.1" numOctaves="2" result="turbulence"/>
+                    <feColorMatrix in="turbulence" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="lightning"/>
+                    <feComposite in="SourceGraphic" in2="lightning" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+                </filter>
+            </defs>
+        </svg>
+    </div>
+
+    <!-- Main Container -->
+    <main class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>RAMA SILALAHi<span class="gradient-text">BUTTONS</span></h1>
+                    </div>
+                </div>
+                
+                <div class="header-actions">
+                    <div class="status-badge">
+                        <span class="status-dot"></span>
+                        <span class="status-text">9 Effects</span>
+                    </div>
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero -->
+        <section class="hero">
+            <h1 class="hero-title">Hover & <span class="gradient-text">Active</span> Effects</h1>
+            <p class="hero-subtitle">Collection of FREE open source UI button models!</p>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">9</span>
+                    <span class="stat-label">Effects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">⚡</span>
+                    <span class="stat-label">Lightning</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">🩵</span>
+                    <span class="stat-label">Try In Your Project</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buttons Grid -->
+        <section class="buttons-section">
+            <div class="section-header">
+                <h2 class="section-title">Button <span class="gradient-text">Collection</span></h2>
+                <p class="section-subtitle"></p>
+            </div>
+            
+            <div class="buttons-grid" id="buttonsGrid">
+                <!-- Akan diisi JavaScript -->
+            </div>
+        </section>
+
+        <!-- Code Snippets -->
+        <section class="code-section">
+            <div class="section-header">
+                <h2 class="section-title">Code <span class="gradient-text">Snippets</span></h2>
+                <p class="section-subtitle">Copy paste langsung pakai</p>
+            </div>
+            
+            <div class="code-grid" id="codeGrid">
+                <!-- Akan diisi JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <span>RAMA SILALAHi BUTTONS V2</span>
+            </div>
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">Effects</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 RAMA SILALAHi BUTTONS • Hover & Active Effects • by  RAMA SILALAHi</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Code copied!</span>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
